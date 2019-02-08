@@ -2,11 +2,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{741FF28C-581C-4C51-821D-032392836C16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Fonet", "Core\Fonet.csproj", "{741FF28C-581C-4C51-821D-032392836C16}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cli", "Cli\Cli.csproj", "{5359D04B-306B-4520-84C4-4C9965FC58CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cli", "Cli\Cli.csproj", "{5359D04B-306B-4520-84C4-4C9965FC58CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHello", "TestHello\TestHello.csproj", "{F35F557F-E1F6-4455-ADD3-9F9A7FAB814B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestHello", "TestHello\TestHello.csproj", "{F35F557F-E1F6-4455-ADD3-9F9A7FAB814B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7F5D48FA-5F86-4B26-9CCB-83FDCDD2BFB8}
 	EndGlobalSection
 EndGlobal

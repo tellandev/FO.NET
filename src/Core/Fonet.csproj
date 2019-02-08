@@ -5,17 +5,18 @@
     <ApplicationIcon />
     <AssemblyKeyContainerName />
     <AssemblyName>Fonet</AssemblyName>
-    <AssemblyOriginatorKeyFile />
+    <AssemblyOriginatorKeyFile>keypair.snk</AssemblyOriginatorKeyFile>
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Fonet.Cli</RootNamespace>
+    <RootNamespace>Fonet</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
     <StartupObject />
     <FileUpgradeFlags />
     <UpgradeBackupLocation />
+    <OldToolsVersion>3.5</OldToolsVersion>
     <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SignAssembly>false</SignAssembly>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <LangVersion>7.3</LangVersion>
     <PublishUrl>publish\</PublishUrl>
@@ -32,30 +33,35 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <AssemblyTitle>FO.NET CLI</AssemblyTitle>
+    <AssemblyTitle>FO.NET</AssemblyTitle>
     <Product>FO.NET</Product>
-    <Description>Command line interface to FO.NET</Description>
+    <Description>XSL-FO to PDF Rendering Engine</Description>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <AssemblyVersion>1.0.1</AssemblyVersion>
     <FileVersion>1.0.1</FileVersion>
-    <NoWarn />
     <NoStdLib>false</NoStdLib>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <BaseAddress>285212672</BaseAddress>
     <FileAlignment>4096</FileAlignment>
     <RegisterForComInterop>false</RegisterForComInterop>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <ConfigurationOverrideFile />
-    <DocumentationFile />
     <PreBuildEvent />
     <PostBuildEvent />
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugType>full</DebugType>
-  </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DocumentationFile>bin\$(Configuration)\Fonet.xml</DocumentationFile>
+    <NoWarn />
+    <WarningLevel>3</WarningLevel>
     <DebugType>none</DebugType>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DocumentationFile />
+    <NoWarn>0618</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
   </PropertyGroup>
   <PropertyGroup>
     <PreBuildEvent />
@@ -63,9 +69,13 @@
     <Version>1.0.1</Version>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="keypair.snk" />
     <None Include="Settings.StyleCop" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Fonet.csproj" />
+    <PackageReference Include="System.Drawing.Common" Version="4.5.1" />
   </ItemGroup>
 </Project>

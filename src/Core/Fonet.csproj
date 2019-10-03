@@ -66,7 +66,7 @@
   <PropertyGroup>
     <PreBuildEvent />
     <PostBuildEvent />
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <Authors>griffm, WinterDev, blair0011, daniiiol</Authors>
     <PackageId>Fonet.Core</PackageId>
     <RepositoryUrl>https://github.com/daniiiol/FO.NET</RepositoryUrl>

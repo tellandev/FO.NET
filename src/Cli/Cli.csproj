@@ -4,7 +4,7 @@
     <ProductVersion>9.0.30729</ProductVersion>
     <ApplicationIcon />
     <AssemblyKeyContainerName />
-    <AssemblyName>Fonet</AssemblyName>
+    <AssemblyName>Fonet.Cli</AssemblyName>
     <AssemblyOriginatorKeyFile />
     <DefaultClientScript>JScript</DefaultClientScript>
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>

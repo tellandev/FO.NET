@@ -35,7 +35,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
     <AssemblyTitle>FO.NET</AssemblyTitle>
     <Product>FO.NET</Product>
-    <Description>XSL-FO to PDF Rendering Engine created by griffm and WinterDev and converted to .Net Core 2.2 by blair0011.</Description>
+    <Description>XSL-FO to PDF Rendering Engine created by griffm and WinterDev and converted to .Net Standard 2.0 by tellandev</Description>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <AssemblyVersion>1.0.1</AssemblyVersion>
     <FileVersion>1.0.1</FileVersion>
@@ -67,9 +67,9 @@
     <PreBuildEvent />
     <PostBuildEvent />
     <Version>1.0.2</Version>
-    <Authors>griffm, WinterDev, blair0011, daniiiol</Authors>
-    <PackageId>Fonet.Core</PackageId>
-    <RepositoryUrl>https://github.com/daniiiol/FO.NET</RepositoryUrl>
+    <Authors>griffm, WinterDev, blair0011, daniiiol, tellandev</Authors>
+    <PackageId>Fonet.Standard</PackageId>
+    <RepositoryUrl>https://github.com/tellandev/FO.NET</RepositoryUrl>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <PackageTags>fo fonet fo.net</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>

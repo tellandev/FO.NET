@@ -1,6 +1,8 @@
 ﻿//Apache2, 2017, WinterDev
 //Apache2, 2009, griffm, FO.NET
 using System;
+using System.Collections.Concurrent;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 
@@ -8,10 +10,18 @@ namespace Fonet.Pdf.Gdi
 {
     internal sealed class LibWrapperLinux
     {
-        [DllImport("user32", CharSet = CharSet.Auto)]
-        internal static extern IntPtr GetDC(
+        private static Lazy<ConcurrentDictionary<long, Graphics>> graphicsList = new Lazy<ConcurrentDictionary<long, Graphics>>(() => new ConcurrentDictionary<long, Graphics>());
+
+        internal static IntPtr GetDC(
             IntPtr hWnd // handle to window
-            );
+            )
+        {
+            var graphics = Graphics.FromHwnd(hWnd);
+            var hdc = graphics.GetHdc();
+            graphicsList.Value.TryAdd(hdc.ToInt64(), graphics);
+
+            return hdc;
+        }
 
         [DllImport("gdi32", CharSet = CharSet.Auto)]
         internal static extern uint GetFontData(
@@ -88,9 +98,21 @@ namespace Fonet.Pdf.Gdi
             );
 
         [DllImport("gdi32", CharSet = CharSet.Auto)]
-        internal static extern bool DeleteDC(
+        private static extern bool DeleteDC(
             IntPtr hdc // handle to DC
             );
+
+        internal static bool DeleteDCWithGraphics(IntPtr hdc)
+        {
+            if (graphicsList.Value.TryRemove(hdc.ToInt64(), out Graphics graphics))
+            {
+                graphics?.ReleaseHdc();
+                graphics?.Dispose();
+                return true;
+            }
+            else
+                return DeleteDC(hdc);
+        }
 
         [DllImport("gdi32", CharSet = CharSet.Auto)]
         internal static extern int EnumFontFamilies(

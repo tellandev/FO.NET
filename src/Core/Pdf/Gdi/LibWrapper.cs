@@ -107,7 +107,7 @@ namespace Fonet.Pdf.Gdi
             IntPtr hdc // handle to DC
             )
         {
-            return IsWindows ? LibWrapperWindows.DeleteDC(hdc) : LibWrapperLinux.DeleteDC(hdc);
+            return IsWindows ? LibWrapperWindows.DeleteDC(hdc) : LibWrapperLinux.DeleteDCWithGraphics(hdc);
         }
 
         internal static int EnumFontFamilies(

@@ -37,8 +37,8 @@
     <Product>FO.NET</Product>
     <Description>XSL-FO to PDF Rendering Engine created by griffm and WinterDev and converted to .Net Standard 2.0 by tellandev</Description>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <AssemblyVersion>1.0.1</AssemblyVersion>
-    <FileVersion>1.0.1</FileVersion>
+    <AssemblyVersion>1.0.4</AssemblyVersion>
+    <FileVersion>1.0.4</FileVersion>
     <NoStdLib>false</NoStdLib>
     <RemoveIntegerChecks>false</RemoveIntegerChecks>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
@@ -66,7 +66,7 @@
   <PropertyGroup>
     <PreBuildEvent />
     <PostBuildEvent />
-    <Version>1.0.2</Version>
+    <Version>1.0.5</Version>
     <Authors>griffm, WinterDev, blair0011, daniiiol, tellandev</Authors>
     <PackageId>Fonet.Standard</PackageId>
     <RepositoryUrl>https://github.com/tellandev/FO.NET</RepositoryUrl>
